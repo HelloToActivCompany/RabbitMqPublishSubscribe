@@ -8,13 +8,13 @@ using RabbitMQ.Client.Events;
 
 namespace RabbitMqPublishSubscribe
 {
-	public class RabbitMqPublishSubscribe : IPublishSubscribe, IDisposable
+	public class RabbitMqManager : IPublishSubscribe, IDisposable
 	{
 		private readonly IModelFactory _modelFactory;
 
 		private readonly List<IModel> _receiverChannels = new List<IModel>();
 
-		public RabbitMqPublishSubscribe(IModelFactory modelFactory)
+		public RabbitMqManager(IModelFactory modelFactory)
 		{
 			_modelFactory = modelFactory;
 		}
