@@ -1,0 +1,1 @@
+RabbitMQ Implementation of PasswordGeneratorInternalTypes.IPublishSubscriber

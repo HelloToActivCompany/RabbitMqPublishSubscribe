@@ -1,0 +1,15 @@
+language: csharp
+solution: RabbitMqPublishSubscribe.sln
+mono: none
+dotnet: 1.0.1
+dist: trusty
+sudo: required
+script: 
+    - chmod +x ./Build.sh && ./Build.sh    
+deploy:
+  skip_cleanup: true
+  provider: script
+  script: 
+    - chmod +x ./Deploy.sh && ./Deploy.sh "283ebaeb-a6f6-44cf-9005-ac3dda1ecd65" "https://www.myget.org/F/armyfriends/api/v2/package"
+  on:
+    branch: master
